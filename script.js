@@ -101,7 +101,6 @@ const countValues = (arr, obj) => {
     counts[value] = counts[value] ? counts[value] + 1 : 1
     biggestValue.push(counts[value])
   }
-
   let orderedValues = biggestValue.sort().reverse()
   let entries = Object.entries(counts)
   let orderedChars = []
@@ -109,13 +108,14 @@ const countValues = (arr, obj) => {
     if (key[1] === orderedValues[0]) {
       obj.letter = key[0]
       obj.count = key[1]
+      
       for (let i = 0; orderedValues.length; i++) {
         if ((orderedValues[0] = orderedValues[1])) {
           orderedChars.push(key[0])
           orderedChars.sort()
           obj.letter = orderedChars[0]
           break
-        }
+        } 
       }
     }
   })
