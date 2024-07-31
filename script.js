@@ -64,7 +64,6 @@ const createNickname = arr => {
 }
 
 createNickname(people)
-// console.log(people)
 
 //Zadanie 2
 const peopleWithNickName = people.filter(person => person.nickName)
@@ -87,7 +86,6 @@ function checkLength(arr) {
 }
 
 checkLength(peopleWithNickName)
-// console.log(peopleWithNickName)
 
 //zadanie 3
 const makeValues = arr => {
